@@ -8,7 +8,7 @@ import { RegistrationPage } from "./pages/registration/registration_page";
 
 function App() {
   return (
-    <Router >
+    <Router  basename={process.env.PUBLIC_URL}>
     <Switch>
         <Route exact path='/' render={()=><Redirect to='/login'/>}/>
         <Route path='/login' render={()=><LoginPage/>}/>
